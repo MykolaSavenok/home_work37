@@ -6,7 +6,7 @@ describe('removeElementFromArray', () => {
       const array = [1, 2, 3, 4, 5, 3, 6, 7];
       removeElementFromArray(array, 5);
 
-      expect(array).toEqual(array);
+      expect(array).toEqual([1, 2, 3, 4, 3, 6, 7]);
    });
 
    test('видалення неіснуючого елемента не змінює масив', () => {
