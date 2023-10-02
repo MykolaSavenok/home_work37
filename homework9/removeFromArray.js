@@ -1,6 +1,7 @@
-export const removeElementFromArray = function (array, element) {
-   const index = array.indexOf(element);
-   if (index !== -1) {
-      array.splice(index, 1)
+export function removeElementFromArray(array, ...elementsToRemove) {
+   for (let i = array.length - 1; i >= 0; i--) {
+      if (elementsToRemove.includes(array[i])) {
+         array.splice(i, 1);
+      }
    }
 }
